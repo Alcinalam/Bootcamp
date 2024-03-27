@@ -20,14 +20,15 @@ public class Operator {
     e -= 1;
     System.out.println(e); //6
 
-    int predecrement = --e; // predecrement = 5
+    int predecrement = --e; // predecrement = 5 deduct first, assign later
     System.out.println(predecrement); // 5
     System.out.println(e); // 5
 
-    int postdecrement = e--; //postdecrement = 5
+    int postdecrement = e--; //postdecrement = 5 assign first deduct later
     System.out.println(postdecrement); // 5
     System.out.println(e); // 4
 
+    //two steps above, first assign and then deduction
 
 
 

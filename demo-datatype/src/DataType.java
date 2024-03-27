@@ -30,7 +30,7 @@ public class DataType {
     int a = 1;
     int b = 4;
     int c = a / b;
-    System.out.println(c);// trim to int 不是4捨5入
+    System.out.println(c);// result 0 , trim to int 不是4捨5入
 
     double k = 1.3;
     double k2 = 1.32;
