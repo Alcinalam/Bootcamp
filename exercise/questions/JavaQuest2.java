@@ -41,7 +41,7 @@ public class JavaQuest2 {
     int year1 = 2009;
     // Program a condition to check if it is a leap year.
     // But should NOT print anything.
-    if ((year1 % 4 == 0) && ((year1 % 100 != 0) || (year1 % 400 != 0))) {
+    if ((year1 % 4 == 0) && ((year1 % 100 != 0) || (year1 % 400 == 0))) {
       System.out.println("2009 is a leap year.");
     }
 

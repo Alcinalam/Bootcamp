@@ -1,4 +1,4 @@
-public class App {
+public class DemoIf {
     public static void main(String[] args) {
         int x = 4;
         int y = 0;
@@ -67,17 +67,85 @@ public class App {
         } else {
             grade = 'F';
         }
-        if (examResult == "F") { //char 可以用==
+        if (examResult == "F") { // char 可以用==
             examResult = "failed";
         }
-        System.out.println("The grade is " + grade + " and " + examResult + ".");
+        System.out
+                .println("The grade is " + grade + " and " + examResult + ".");
         // score > 90 -->A (Pass)
         // 80-90 --> B (Pass)
         // 70-79 --> C (Pass)
         // <70 --> F (Fail)
         // Print out: "The grade is B and passed."
 
+        // String
+        String s1 = "hello";
+        // check if the length of s1 > 5
+        if (s1.length() > 5) {
+            System.out.println("Yes");
+
+        }
+        // Another approach:(! means NOT)
+        if (!(s1.length() <= 5)) {
+
+        }
+
+        // char (==, >=, <=, >, <,!=)
+        char gender = 'F';
+        if (gender == 'M') {
+
+        } else if (gender == 'F') {
+
+        }
+
+        if (gender != 'M') {
+            System.out.println("gender is not equals to M");
+        }
+
+        // boolean (==, !=)
+        int v = 4;
+        boolean b1 = v > 10; // false
+        if (b1 == true) {
+
+        }
+        if (b1 != false) {
+
+        }
+        if (!(b1 == true)) {
+
+        }
+
+        // int, long , short , byte, float, double (==, !=, >=,<=,>,<)
+        int j = 10;
+        if (j > 10.2) { // j -->double
+            System.out.println("j > 10.2");
+        } else {
+            System.out.println("j <= 10.2");// print
+        }
+
+        double u = 10.4;
+        if (u > 10) { // 10--> double: 10.4 > 10.0
+            System.out.println("u > 10");
+        }
+
+        //String.charAt(int index) --> return char
+        String s2 = "abcdefg";
+        
+        //check if s2 start with 'a' and end with 'g', print out "yes", otherwise "no"
+        //System.out.println(s2.length()-1);
+        //System.out.println(s2.charAt(0));
+        //System.out.println(s2.charAt(s2.length()-1));
+        char start = s2.charAt(0);
+        char end = s2.charAt(s2.length()-1);
+        if ((start == 'a') && (end == 'g')){
+            System.out.println("yes");
+        } else {
+            System.out.println("no");
+        }
+        
+        
 
 
     }
 }
+
