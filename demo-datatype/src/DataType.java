@@ -94,13 +94,13 @@ public class DataType {
     byte b10 = 4; // for integer (number), java will help check the value, if it is in range. int ->byte
     //byte b12 = r1; //security problem -->error as r1 is int
 
-        long l4 = i1; // in -> long
+    long l4 = i1; // int -> long
     long l5 = 5; // 5 is an int value by default
     //long l6 = 5i;
     long l6 = 10000; // 10000 is an int value
     long l7 = 10000L; //10000 is a long value
 
-    long l8 = 2200000000; // out of int range 
+   // long l8 = 2200000000; // out of int range 
     long l9 = 2200000000L; //
 
     // char (use single quote)
@@ -109,7 +109,7 @@ public class DataType {
     char c3 = '^';
     char c4 = ' ';
     char c5;
-    //c5 = ''; // comile time error
+    //c5 = ''; // compile time error
     //char c6 = 'aa'; // allow single character only
 
     // boolean

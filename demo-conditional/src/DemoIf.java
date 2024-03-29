@@ -143,8 +143,18 @@ public class DemoIf {
             System.out.println("no");
         }
         
-        
+        int age = 18;
+        String lastName = "Lau";
 
+        // if the left condition pass, the right one will be skipped
+        if (age == 18  || "Lau".equals(lastName)){
+
+        }
+        
+        System.out.println(true && false); //false
+        System.out.println(false && true); //false
+        System.out.println(false && false); //false
+        System.out.println(true && true); //true
 
     }
 }
