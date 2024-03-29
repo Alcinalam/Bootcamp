@@ -26,7 +26,7 @@ public class JavaQuest5 {
       }
     }
     if (count > 0) {
-      System.out.println(count);
+      System.out.println("We found " + count + " character "+ target + " in the Stringcount");
     } else {
       System.out.println("Not Found");
     }
