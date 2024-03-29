@@ -1,4 +1,4 @@
-package questions;
+package exercise.questions;
 /**
  * Expected Output:
  * 
