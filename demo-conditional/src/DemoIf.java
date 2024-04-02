@@ -25,7 +25,7 @@ public class DemoIf {
             max = b;
         }
         System.out.println("The max number is " + max + ".");
-        // Print out: The max nubmer is 12.
+        // Print out: The max number is 12.
 
         // Example 2
         String day = "Sunday"; // Monday, Tuesday...

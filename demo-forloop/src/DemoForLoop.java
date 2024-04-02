@@ -78,16 +78,17 @@ public class DemoForLoop {
         }
         System.out.println("sum of: " + k);
 
-        // sum up all even number
+        
         k = 0;
         for (int i = min; i <= max; i++) {
             if (i % 2 == 0) { // even number
                 k += i;
             }
         }
-        System.out.println("sum of even: " + k);
+        System.out.println("sum of even: " + k); // 30
 
         // counting
+        // count how many l in the string
         String str = "hello world";
         int c = 0;
         
