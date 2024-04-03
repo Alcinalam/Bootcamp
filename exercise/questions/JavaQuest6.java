@@ -21,5 +21,19 @@ public class JavaQuest6 {
     }
 
     System.out.println(Arrays.toString(arr));
+
+
+// second approach (less space)
+    int n = 1;
+      if (n < 2) {
+          System.out.print(n + " ");
+      }
+      int p = 0, q = 0, r = 1;
+      for (int i = 2; i < 16; ++i) {
+          p = q; 
+          q = r; 
+          r = p + q;
+          System.out.print(r + " ");
+      }
   }
 }
