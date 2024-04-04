@@ -16,7 +16,7 @@ public class JavaQuest10 {
 
   public static void main(String[] args) {
 
-    int[] my_array = { 25, 14, 56, 15, 36, 56, 77, 18, 29, 49 };
+    int[] myArray = { 25, 14, 56, 15, 36, 56, 77, 18, 29, 49 };
                         
     Scanner input = new Scanner(System.in);
 
@@ -26,17 +26,17 @@ public class JavaQuest10 {
     System.out.print("Input the value: ");
     int newValue = input.nextInt();
 
-    System.out.println("Original Array : " + Arrays.toString(my_array));
+    System.out.println("Original Array : " + Arrays.toString(myArray));
 
     // code here ...
-    int newArr [] = new int [my_array.length];
-    for (int i = 0 ; i < my_array.length ;i++ ){
+    int newArr [] = new int [myArray.length];
+    for (int i = 0 ; i < myArray.length ;i++ ){
       if (i < indexPosition){
-        newArr[i]= my_array[i];
+        newArr[i]= myArray[i];
       } else if (i== indexPosition) {
         newArr[i]= newValue;
       } else {
-        newArr[i]= my_array[i-1];
+        newArr[i]= myArray[i-1];
       }
 
     } 

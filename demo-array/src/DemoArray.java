@@ -94,7 +94,7 @@ public class DemoArray {
         String s3 = "abc"; // "abc" is a string object in heap
         String s4 = new String("abc"); // this "abc" is another new string objecct in heap
         String s5 = "abc"; // "abc" object is same as the one in s3 (無用過new, 指住同一個object)
-        String s6 = new String("abc"); // this "abc" is antoehr new string object
+        String s6 = new String("abc"); // this "abc" is another new string object
 
         //
         String[] strings2 = new String[3];
@@ -198,6 +198,91 @@ public class DemoArray {
             }
         }
         System.out.println(amount); // 7.8 * 3 + 7.8 *5 =62.4
+
+        // Swapping
+        
+        int[] arr3 = new int[]{10, 3, 9, 4};
+        // 9 , 3, 10, 4
+        int temp = arr3[0];
+        arr3[0] = arr3[2];
+        arr3[2] = temp;
+
+        System.out.println(Arrays.toString(arr3)); // [9, 3, 10, 4]
+
+        // Now:    [9,  3, 10, 4]
+        // Target: [3, 10,  4, 9] 
+        // Move the first element to the tail : loop + swap
+        int t = -1;
+        for (int i = 0 ; i < arr3.length-1 ; i++){
+            t = arr3[i];
+            arr3 [i] = arr3 [i + 1];
+            arr3 [i + 1] = t;
+            }
+        System.out.println(Arrays.toString(arr3));// [3,10,4,9]
+        // Now: [3,10,4,9]
+        // Target [10,3,4,9]
+        // Move the max value to the head of the array
+        int max2 = Integer.MIN_VALUE;
+        int idx = -1;
+        for (int i = 0 ; i < arr3.length ; i++){
+            if (arr3[i] > max2){
+                max2 = arr3[i];
+                idx = i;
+            }
+        }
+        // idx = 1   
+        for (int i = idx ; i > 0 ; i--){
+            t = arr3[i];
+            arr3[i] = arr3[i - 1];
+            arr3[i - 1] = t;
+        }
+        System.out.println(Arrays.toString(arr3));
+
+        // Sorting Bubble
+        int [] arr4 = new int [] {-10, -42, 8, 19, 1};
+        // Round 1:
+        // [-42, -10, 8, 19, 1] : -10 > -42
+        // [-42, -10, 8, 19, 1] : 8 > -10
+        // [-42, -10, 8, 19, 1] : 19 > 8
+        // [-42, -10, 8, 1, 19] : 19 > 1
+        // Round 2:
+        // [-42, -10, 8, 1, 19] : -10 >-42
+        // [-42, -10, 8, 1, 19] : 8 > -10
+        // [-42, -10, 1, 8, 19] : 8 > 1
+        
+
+        // Target:[-42, -10, 1, 8 , 19]
+        
+        for (int i = 0 ; i < arr4.length-1 ; i++) { // 0,1,2,3
+            for (int j = 0 ; j < arr4.length -i-1; j++) { 
+                if (arr4[j] > arr4 [j + 1]) { 
+                    t = arr4[j];
+                    arr4[j] = arr4[j+1];
+                    arr4[j + 1] = t;
+                }
+            }
+        }
+        System.out.println(Arrays.toString(arr4));
+
+        // Sorting - Insertion sort
+        int [] arr5 = new int[]{-10, -5, -30, 9, 1, -100};
+        for (int i = 1; i < arr5.length; i++){ // 0,1,2,3,4,5
+            int key = arr5[i];
+            int j;
+            for (j = i - 1 ; j <arr5.length; j--){
+                if (arr5[j] <= key){ // break的condition 行先
+                    break;
+                }
+                arr5[j + 1] = arr5[j];
+            }
+            arr5[j+1]= key; // insert
+        }
+        System.out.println(Arrays.toString(arr5));
+
+        // Sorting - Selection Sort
+        
+
+
 
     }
 }

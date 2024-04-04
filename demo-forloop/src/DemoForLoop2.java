@@ -31,33 +31,18 @@ public class DemoForLoop2 {
 
     int n = 5;
 
-    for (int i = 0; i < n ; i++){ // ith
-      for (int j = 0 ; j < n; j++){
+    for (int i = 0; i < n; i++) { // ith
+      for (int j = 0; j < n; j++) {
         System.out.println("*");
       }
       System.out.println();
     }
 
-    //   *
-    //  ***
-    // *****
-    //  ***
-    //   *
-
-    // appoarch 1
-    for (int i = 0; i < 5; i++) {
-      for (int j = 0; j < 5; j++) {
-        if ((i == 0 && j == 0) || (i == 0 && j == 1) || (i == 0 && j == 3)
-            || (i == 0 && j == 4) || (i == 1 && j == 0) || (i == 1 && j == 4)
-            || (i == 3 && j == 0) || (i == 3 && j == 4) || (i == 4 && j == 0)
-            || (i == 4 && j == 1) || (i == 4 && j == 3) || (i == 4 && j == 4)) {
-          System.out.print(" ");
-        } else {
-          System.out.print("*");
-        }
-      }
-      System.out.println(" ");
-    }
+    //    *
+    //   ***
+    //  *****
+    //   ***
+    //    *
 
     // draw the cross first
     for (int i = 0; i < 5; i++) {
@@ -74,14 +59,36 @@ public class DemoForLoop2 {
       System.out.println(" ");
     }
 
-      // *
-      // **
-      // ***
-      // ****
-      // *****
+    // 
+    
+    for (int i = 1; i <= 3; i++) {
+      for (int j = 1; j <= 3 - i; j++) {
+        System.out.print(" ");
+      }
+      for (int k = 1; k <= 2 * i - 1; k++) {
+        System.out.print("*");
+      }
+      System.out.println();
+    }
 
-    for (int i = 0; i < 5 ; i++) { //0,1,2,3,4,
-      for (int j = 0; j<=i ; j++){ 
+    for (int i = 2; i >= 1; i--) {
+      for (int j = 1; j <= 3 - i; j++) {
+        System.out.print(" ");
+      }
+      for (int k = 1; k <= 2 * i - 1; k++) {
+        System.out.print("*");
+      }
+      System.out.println();
+    }
+
+    // *
+    // **
+    // ***
+    // ****
+    // *****
+
+    for (int i = 0; i < 5; i++) { // 0,1,2,3,4,
+      for (int j = 0; j <= i; j++) {
         System.out.print("*");
       }
       System.out.println();
@@ -91,39 +98,39 @@ public class DemoForLoop2 {
     String str2 = "abcdefg hello world!";
     // Find the index of the second of space character. If exists, print the index, if no, print N/A
     int spaceCount = 0;
-    for (int i = 0; i < str2.length();i++){
-      if (str2.charAt(i) == ' '){
-        if (++spaceCount == 2){
-        System.out.println("index= " + i);// index 13
-        break;
+    for (int i = 0; i < str2.length(); i++) {
+      if (str2.charAt(i) == ' ') {
+        if (++spaceCount == 2) {
+          System.out.println("index= " + i);// index 13
+          break;
+        }
       }
     }
-  }
-  if (spaceCount < 2) {
-    System.out.println("N/A");
-  }
-    
-  
+    if (spaceCount < 2) {
+      System.out.println("N/A");
+    }
+
+
     // break;
-    for (int i = 0; i < 10; i++){
+    for (int i = 0; i < 10; i++) {
       if (i > 3) {
         break; // break the nearest loop
       }
       System.out.println("hello");
     }
-// hello
-// hello
-// hello
-// hello
+    // hello
+    // hello
+    // hello
+    // hello
 
     // continue;
-    for (int i = 0; i < 10; i++){
+    for (int i = 0; i < 10; i++) {
       System.out.println("abc");
       if (i > 3) {
         continue; // Skip the rest, go to next iteration
       }
       System.out.println("hello");
-    }    
+    }
 
 
 

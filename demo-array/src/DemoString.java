@@ -55,6 +55,14 @@ public class DemoString {
     char c = s.charAt(2); // 'l'
     System.out.println(s.indexOf('l')); //  2 the index of the first matching character
     System.out.println(s.indexOf('!')); // -1
+    System.out.println(s.lastIndexOf('l')); // 3 --> the index of last matching character
+
+    System.out.println(s.indexOf("ll")); // 2
+    System.out.println(s.lastIndexOf ("ll")); // 2 
+
+    System.out.println("hello".equals("Hello")); // false
+    System.out.print("hello".equalsIgnoreCase("Hello"));//true
+    System.out.println("hello".equalsIgnoreCase("Hello"));// false
 
 
   }
