@@ -41,7 +41,7 @@ public class JavaQuest10 {
 
     } 
 
-    // my_array = newArr;
+    // myArray = newArr;
     System.out.println("New Array: " + Arrays.toString(newArr));
   }
 }
