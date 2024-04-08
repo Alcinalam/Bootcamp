@@ -12,7 +12,7 @@ public class Flat {
   }
 
   // public String getRoom() {
-  //   return this.room;
+  // return this.room;
   // }
 
   public void setFloor(int floor) {
@@ -20,7 +20,7 @@ public class Flat {
   }
 
   // public int getFloor() {
-  //   return this.floor;
+  // return this.floor;
   // }
 
   public void setStreetName(String streetName) {
@@ -28,7 +28,7 @@ public class Flat {
   }
 
   // public String getStreetName() {
-  //   return this.streetName;
+  // return this.streetName;
   // }
 
   public void setTenantName(String tenantName) {
@@ -40,8 +40,7 @@ public class Flat {
   // }
 
   public String fullAddress() {
-    return this.room + ", " + this.floor + ", " +
-        this.streetName;
+    return this.room + ", " + this.floor + ", " + this.streetName;
   }
 
   public String withGarden() {
@@ -49,7 +48,7 @@ public class Flat {
   }
 
   public String available() {
-    return this.tenantName.isEmpty() ? "Yes":"No";
+    return this.tenantName.isEmpty() ? "Yes" : "No";
   }
 
   public String toString() {
@@ -85,7 +84,7 @@ public class Flat {
     System.out.println(flat.toString());
     System.out.println(flat2.toString());
 
-    
+
   }
 
 
