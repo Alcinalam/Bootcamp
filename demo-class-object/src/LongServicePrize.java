@@ -59,7 +59,7 @@ public class LongServicePrize {
     System.out.println("Ten year Award? " + prize1.tenYearAward());
 
     LongServicePrize prize2 = new LongServicePrize();
-    prize2.setName("Mandy Lee");
+    prize2.setName("Martin Cheng");
     prize2.setThisYear(2024);
     prize2.setYearOnboard(2014);
     System.out.println("prize1" + prize2.toString());
