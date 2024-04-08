@@ -46,7 +46,7 @@ public class DemoArray {
 
         Strings[1] = Strings[2]; // 用[2] object address pour into [1] address,指針重新指向value xyz
         System.out.println(Strings[1]);// "xyz"
-        System.err.println(Strings[2]);// "xyz"
+        System.out.println(Strings[2]);// "xyz"
 
         String[] backup = strings; // assign the address of original array to another array variable
         strings = new String[4];
@@ -96,7 +96,7 @@ public class DemoArray {
         String s5 = "abc"; // "abc" object is same as the one in s3 (無用過new, 指住同一個object)
         String s6 = new String("abc"); // this "abc" is another new string object
 
-        //
+        // 3 Ways to create new Array
         String[] strings2 = new String[3];
         strings2[0] = "hello";
         strings2[1] = "hello";

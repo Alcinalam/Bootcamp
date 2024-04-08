@@ -15,6 +15,8 @@ public class JavaQuest11 {
     int delayedArrivalTime1 = findDelayedArrivalTime(15, 5); // 20
     int delayedArrivalTime2 = findDelayedArrivalTime(23, 5); // 4
     int delayedArrivalTime3 = findDelayedArrivalTime(18, 6); // 0
+
+    System.out.println((15+5)%24);
     
   }
 
@@ -22,4 +24,7 @@ public class JavaQuest11 {
     return arrivalTime + delayedTime >= 24 ? arrivalTime + delayedTime - 24
         : arrivalTime + delayedTime;
   }
+
+  // (arrivalTime + delayedTime)%24
+  
 }
