@@ -27,13 +27,13 @@ public class LongServicePrize {
   //   this.thisYear = thisYear;
   // }
 
-  public boolean fiveYearAward() {
-    return Year.now().getValue() - this.yearOnboard == 5;
+  public String yearAward() {
+    return "YearAward : ".concat(String.valueOf(Year.now().getValue() - this.yearOnboard));
   }
 
-  public boolean tenYearAward() {
-    return Year.now().getValue() - this.yearOnboard == 10;
-  }
+  // public boolean tenYearAward() {
+  //   return Year.now().getValue() - this.yearOnboard == 10;
+  // }
 
   public String toString() {
     return "LongServicePrize("//
@@ -47,25 +47,25 @@ public class LongServicePrize {
     prize.setName("Carmen Chan");
     // prize.setThisYear(2024);
     prize.setYearOnboard(1999);
-    System.out.println("prize" + prize.toString());
-    System.out.println("Five year Award ? " + prize.fiveYearAward());
-    System.out.println("Ten year Award? " + prize.tenYearAward());
+    System.out.println(prize.toString());
+    System.out.println(prize.yearAward());
+    // System.out.println("Ten year Award? " + prize.tenYearAward());
 
     LongServicePrize prize1 = new LongServicePrize();
     prize1.setName("Mandy Lee");
     //prize1.setThisYear(2024);
     prize1.setYearOnboard(2019);
-    System.out.println("prize1" + prize1.toString());
-    System.out.println("Five year Award ? " + prize1.fiveYearAward());
-    System.out.println("Ten year Award? " + prize1.tenYearAward());
+    System.out.println(prize1.toString());
+    System.out.println(prize1.yearAward());
+    // System.out.println("Ten year Award? " + prize1.tenYearAward());
 
     LongServicePrize prize2 = new LongServicePrize();
     prize2.setName("Martin cheng");
     // prize2.setThisYear(2024);
     prize2.setYearOnboard(2014);
-    System.out.println("prize1" + prize2.toString());
-    System.out.println("Five year Award ? " + prize2.fiveYearAward());
-    System.out.println("Ten year Award? " + prize2.tenYearAward());
+    System.out.println(prize2.toString());
+    System.out.println(prize2.yearAward());
+    // System.out.println("Ten year Award? " + prize2.tenYearAward());
 
   }
 

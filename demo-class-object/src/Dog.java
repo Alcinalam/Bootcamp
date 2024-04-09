@@ -11,12 +11,32 @@ public class Dog {
     // dog2.setAge(4); // rules is okay, cannot run( NPE: null pointer exception )
     Dog dog3 = new Dog();
     dog3.setAge(15); // dog3. the "dot" is to find the object, the method
+
+    Dog dog4 = new Dog ("Ken","Wong",13);
+    System.out.println(dog4);
   }
 
   private String firstName;
   private String lastName;
   private int age;
 
+  // Constructor
+  public Dog (){
+  }
+  // All arguments constructor
+  public Dog (String firsName,String lastName, int age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+  }
+    public Dog (String firsName) {
+      this.firstName = firstName;
+      this.lastName = "Chan";
+      this.age = 0;
+  }
+  
+  
+  
   // set is set raw data, get is derive data
   // if you don't wanna public get this info, 
   // you could hide it without write a getFirst name.
@@ -54,4 +74,7 @@ public class Dog {
   }
 
   
+  
+
+
 }
