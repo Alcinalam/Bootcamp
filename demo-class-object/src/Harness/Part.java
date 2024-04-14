@@ -19,10 +19,10 @@ public class Part {
 
   public String toString() {
     return "Part(" //
-      + "partName= " + this.partName//
-      + ", unitCost= " + unitCost //
-      + ", usage=" + usage //
-      + ")" ;
+        + "partName= " + this.partName//
+        + ", unitCost= " + unitCost //
+        + ", usage=" + usage //
+        + ")";
   }
 
   public double partCost() {
@@ -33,25 +33,22 @@ public class Part {
   }
 
   public static void main(String[] args) {
-    Part parts1 = new Part("seat terminal",3.5, 10);
-    Part parts2 = new Part ("seat connector" , 0.5, 250);
-    Part parts3 = new Part ("seat wire" ,10, 700);
+    Part parts1 = new Part("seat terminal", 3.5, 10);
+    Part parts2 = new Part("seat connector", 0.5, 250);
+    Part parts3 = new Part("seat wire", 10, 700);
 
     BomList L1 = new BomList("B1");
     L1.add(parts1);
     L1.add(parts2);
     L1.add(parts3);
-    
+
     Harness h1 = new Harness("Seat Harness 234");
     h1.add(L1);
     System.out.println(h1);
     System.out.println("Cost: " + L1.harnessCost());
 
 
-  
 
-    
-    
   }
 
 

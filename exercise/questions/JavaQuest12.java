@@ -1,4 +1,4 @@
-package questions;
+
 
 import java.util.Arrays;
 
@@ -26,6 +26,7 @@ public class JavaQuest12 {
     int[] answers2 = twoSum(new int[] { 3, 2, 4 }, 6); // {3, 2, 4} is the dataset, 6 is the target to sum
     int[] answers3 = twoSum(new int[] { 3, 3 }, 7); // {3, 3} is the dataset, 7 is the target to sum
 
+    System.out.println(Arrays.toString(answers2));
   }
 
   // Code a method here to return an array of two numbers that sum up to the
