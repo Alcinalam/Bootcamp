@@ -39,7 +39,7 @@ public class Car {
     }  
 
     
-
+    // getter
     public boolean isOverSpeed() { //return existing name
         return this.isOverSpeed;
     }
@@ -65,7 +65,9 @@ public class Car {
         c2.setSpeed(100.00d);
         c2.setCapacity(5);
         System.out.println(c.toString()); // Car(color=RED, speed=80.5, capacity=4)
-        
+        if (c2.isOverSpeed()){
+        System.out.println("YES");
+        }
 
 
     }

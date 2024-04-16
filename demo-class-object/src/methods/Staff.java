@@ -11,7 +11,7 @@ public class Staff {
   private String name;
   private double salary;
 
-  // Staic Variable
+  // Static Variable
   private static int ageLimit; // 0
 
   // Constructor
@@ -62,6 +62,7 @@ public static void main(String[] args) {
  System.out.println(s1.getHoursOfDay());
  Staff s2 = Staff.of("Jenny");
  System.out.println(s2.HOURS_OF_DAY);
+ 
  
 
 }

@@ -5,6 +5,9 @@
  * return the first palindromic(對稱) string in the array.
  *  If there is no such string, return an empty string "".
 */
+
+import javax.security.auth.kerberos.KerberosCredMessage;
+
 public class JavaQuest18 {
   public static void main(String[] args) {
     String[] testCase1 = new String[] { "abc", "car", "ada", "racecar", "cool" };
@@ -22,10 +25,12 @@ public class JavaQuest18 {
 
   private static boolean isPalindrome(String s) {
     // hints : if a String is Palindrome , return true
-      StringBuilder sb = new StringBuilder(s) ;
-      StringBuilder sbr = new StringBuilder(s);
-      sbr.reverse();
-      return sbr.compareTo(sb) == 0 ? true : false; 
+      String str = "";
+      for (int i = s.length()-1; i >=0; i-- ) {
+          str += s.charAt(i);
+      }
+      
+      return str.compareTo(s) == 0 ? true : false; 
   }
 
   public static String firstPalindrome(String[] words) {

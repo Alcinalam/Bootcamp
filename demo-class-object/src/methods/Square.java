@@ -80,6 +80,7 @@ public class Square {
     xxx(sq2);
     System.out.println(sq2.area());//81
 
+    System.out.println(Staff.PI);
   }
 
 }

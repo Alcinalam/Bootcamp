@@ -23,7 +23,12 @@ public class Person {
     return this.age >= 65;
   }
 
+  public String toString() {
+    return "Person(" //
+      + age //
+      + ")";
 
+  }
  
   public static void main(String[] args) {
     Person person = new Person(); // constructor
