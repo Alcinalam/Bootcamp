@@ -11,6 +11,7 @@ public class DemoMath {
     int a = 10;
     int b = 9;
     int min = Math.min(a,b);
+    System.out.println("min=" + min);
 
     if (a > b)
       min = b;
@@ -26,6 +27,7 @@ public class DemoMath {
     
       double data = Math.abs(-3.2);
       double r = Math.abs(data);
+      System.out.println("data=" + data);
 
       if (data < 0) {
         r *= -1;
@@ -53,13 +55,13 @@ public class DemoMath {
       for (int i = 0; i < arr.length; i++) {
         maxx = Math.max(arr[i],maxx);
       }
-      System.out.println("max=" + maxx); // 20
+      System.out.println("maxx=" + maxx); // 20
 
       int minn = Integer.MAX_VALUE;
       for (int i = 0 ; i < arr.length; i++ ){
         minn = Math.min(arr[i],minn);
       }
-      System.out.println("min=" + minn); //3
+      System.out.println("minn=" + minn); //3
 
   }
 }

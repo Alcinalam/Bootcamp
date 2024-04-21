@@ -10,10 +10,15 @@ public class Main {
     Coffee coffee = new Coffee("Americano", 8, "arabica");
     System.out.println(coffee);
 
+    
     Coffee coffee2 = new Coffee("Latte", 12, "bourbon");
+    Coffee coffee3 = new Coffee("Latte", 12, "bourbon");
     System.out.println(coffee2);
-    coffee2.setBeansName("robusta");
+    //coffee2.setBeansName("robusta");
     System.out.println(coffee2);
+
+    System.out.println(coffee2.equals(coffee3));
+    
 
   }
 }

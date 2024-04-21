@@ -96,9 +96,14 @@ public class Cat extends Animal {
 
     System.out.println(c2.getAnimalName());
 
-    System.out.println(c2.upperX()); // ABC
+    System.out.println("upper" + c2.upperX()); // ABC
 
-
+    Animal a =  new Cat (10, "Jenny"); // 型態 Animal 包住cat
+    
+    Cat c = (Cat) a; // downcast 攞返cat 出嚟
+    // System.out.println(a.getCatName());
+    System.out.println(c.getCatName());
+    
   }
 
 }

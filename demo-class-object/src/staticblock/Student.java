@@ -8,7 +8,7 @@ public class Student {
   private String name; // student name
   
   public static String initialize(){
-  System.out.println(initialize());
+  System.out.println("initialize()");
   return "hello";
   }
 

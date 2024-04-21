@@ -1,5 +1,7 @@
 package beverage;
 
+import java.util.Objects;
+
 public class Coffee extends Beverage {
 
   private String beansName;
@@ -16,7 +18,7 @@ public class Coffee extends Beverage {
   public String getBeansName() {
     return this.beansName;
   }
-
+  @Override
   public String toString() {
     return "coffee(" //
         + "name=" + getName() //
@@ -25,4 +27,18 @@ public class Coffee extends Beverage {
         + ")";
   }
 
+  
+  @Override
+  public boolean equals (Object obj) {
+    if (this == obj)
+      return true;
+    if (!(obj instanceof Coffee))
+      return false;
+    Coffee c = (Coffee) obj;
+    return Objects.equals(this.getName(), c.getName())
+        && Objects.equals(this.getVolume(), c.getVolume())
+        && Objects.equals(this.beansName, c.getBeansName());
+
+    
+  }
 }

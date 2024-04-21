@@ -42,9 +42,9 @@ public class DemoForLoop {
         }
 
 
-        for (int i = 0; i < 10; i++) { // 1 2 3
+        for (int i = 0; i < 10; i++) { // 0 1 2 3
             if (i % 2 == 1) { // odd number
-                System.out.print(i + " ");
+                System.out.print("odd number=" + i + " ");
 
             }
 
