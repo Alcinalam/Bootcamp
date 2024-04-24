@@ -124,12 +124,12 @@ public class DemoForLoop2 {
     // hello
 
     // continue;
-    for (int i = 0; i < 10; i++) {
-      System.out.println("abc");
+    for (int i = 0; i < 6; i++) {
+      System.out.print("123 |");
       if (i > 3) {
         continue; // Skip the rest, go to next iteration
       }
-      System.out.println("hello");
+      System.out.print("OK |");
     }
 
 

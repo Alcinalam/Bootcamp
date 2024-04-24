@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Demo2DArray {
   
   public static void main(String[] args) {
@@ -14,6 +16,11 @@ public class Demo2DArray {
     arr3[1][1] = 1;
     arr3[2][0] = 2;
     arr3[2][1] = 3;
+
+    // int [row 橫行][column直欄]
+    // 2 3
+    // 3 1
+    // 2 3
 
     int sum = 0;
     for (int i = 0 ; i < arr3.length; i++){

@@ -59,7 +59,7 @@ public class Book {
     ArrayList<Book> books2 = new ArrayList<Book>();// 後面Book唔寫都得
 
     // add()
-    books2.add(new Book(3.4d, "Sally"));
+    books2.add(new Book(3.4d,"Sally"));
     books2.add(new Book(3d, "Ken"));
     books2.add(new Book(8d, "Chu"));
 

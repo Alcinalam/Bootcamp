@@ -83,5 +83,11 @@ public class MacbookAir {
     Arrays.sort(arr); // merge sort, ascending sorting
     System.out.println(Arrays.toString(arr));;
 
+
+    Object o = "abc";
+    Object o2 = "abc";
+
+    System.out.println(o.hashCode()); //96354
+    System.out.println(o2.hashCode()); //96354
   }
 }
