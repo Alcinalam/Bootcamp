@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class App {
+public class LinkedListDemo {
     public static void main(String[] args) {
         // right hand side is the base define the way of the method run, left handside only domain
         LinkedList<String> strings = new LinkedList<>(); 
@@ -45,7 +45,11 @@ public class App {
         as.add("def");
         System.out.println(as.remove(1)); // need resize array after remove
         
-        
+        for (int i = 0 ; i < strings.size(); i++) {
+            if (!strings.get(i).equals("abc")){
+            System.out.println(strings.get(i));
+            }
+          }
 
 
     }

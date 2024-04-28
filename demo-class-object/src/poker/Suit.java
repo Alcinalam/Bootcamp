@@ -1,6 +1,6 @@
 package poker;
 
-// Meaning :static final
+// Meaning: static final 
 public enum Suit {
   DIAMOND, //
   CLUB, //

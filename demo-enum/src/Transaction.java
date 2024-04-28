@@ -10,6 +10,18 @@ public class Transaction {
     this.amount = amount;
   }
 
+  public Sign getSign() {
+    return this.sign;
+  }
+
+  public Currency getCurr() {
+    return this.currency;
+  }
+
+  public double getAmount() {
+    return this.amount;
+  }
+
   public String toString() {
     return "Transaction(" //
       + "sign" + this.sign //

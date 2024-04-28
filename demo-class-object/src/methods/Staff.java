@@ -64,6 +64,7 @@ public static void main(String[] args) {
  System.out.println(s2.HOURS_OF_DAY);
  
  
+ 
 
 }
 

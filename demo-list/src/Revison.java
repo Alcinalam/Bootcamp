@@ -101,17 +101,17 @@ public class Revison {
   }
 
   public static Set<Integer> getDuplicated(List<Integer> integers){
-    Set<Integer> results = new HashSet<>();
-    Map<Integer, Integer> map = new HashMap();
-      for (Integer x : integers) { 
-        if (map.containsKey(x)){
-          results.add(x);
-          //continue;
-        } else {
-          map.put(x,null);
+    Set<Integer>results = new HashSet<>();
+    Map<Integer,Integer> map = new HashMap();
+    for (Integer x : integers) {
+      if (map.containsKey(x)) {
+        results.add(x);
+        continue;
       }
-    }  
+      map.put (x,null);
+      System.out.println("Set=" + results);
+      System.out.println("map=" + map);
+    }
     return results;
-  
   }
 }

@@ -28,6 +28,9 @@ public class Square {
 
   }
 
+  public static Square of(int length) {
+    return new Square(length);
+  }
 
   public static int sum(int x, int y) {
     return x + y;
@@ -47,6 +50,13 @@ public class Square {
   public static void xxx (Square square) {
     square = new Square (3); 
   }
+
+  @Override
+  public String toString(){
+    return "square(" //
+      + "length = " + this.length //
+      + ")";
+    }
 
   public static void main(String[] args) {
     // pass by value -> primitives, wrapper classes object, String object
@@ -79,8 +89,13 @@ public class Square {
     Square sq2 = new Square (9);
     xxx(sq2);
     System.out.println(sq2.area());//81
+    
+   System.out.println(Staff.PI);
 
-    System.out.println(Staff.PI);
+   Square sq3 = Square.of(3);
+   System.out.println(sq3.toString()); 
+
   }
+
 
 }

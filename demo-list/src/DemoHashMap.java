@@ -41,9 +41,9 @@ public class DemoHashMap { // base as entry
     HashMap<Customer, Integer> ageMap = new HashMap<>();
     ageMap.put(new Customer("John"), 13);
     ageMap.put(new Customer("John"), 17);
-    System.out.println(ageMap.get(new Customer("John")));// no hashcode -> null ,with hashcode 17
+    System.out.println(ageMap.get(new Customer("John"))); // if no hashcode -> null ,get果個John 都係新的.
 
-    System.out.println(ageMap.size()); // 2
+    System.out.println(ageMap.size()); // 2 , if no hashcode, two John inputted
 
     //
     HashMap<Customer, ArrayList<Order>> orderMap = new HashMap<>();
