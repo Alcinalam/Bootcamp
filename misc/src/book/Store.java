@@ -7,11 +7,9 @@ public class Store {
 
     // handler
     try {
-      System.out.println(total("Book8"));
-    } catch (NullPointerException e) {
-      System.out.println("please input the name of book");
+      System.out.println(total("Book9"));
     } catch (BookException e) {
-      System.out.println(e);
+      System.err.println(e);
       System.out.println("Please input an onlist book");
     }
 
@@ -29,10 +27,8 @@ public class Store {
     for (int i = 0; i < booknames.length; i++) {
       bookmap.put(booknames[i], bookprices[i]);
     }
-    if (bookname == null) {
-      throw new NullPointerException();
-    }
-    if (!bookmap.keySet().contains(bookname)) {
+
+    if (!bookmap.keySet().contains(bookname)|bookname.isEmpty()) {
       throw new BookException(BookSysCode.BK_NOT_FOUND);
     }
     return bookmap.get(bookname);

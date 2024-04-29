@@ -1,3 +1,4 @@
+@FunctionalInterface
 public interface StringSkill { // one-off usage or no attributes
   String concat(String x, String y);
 
