@@ -6,8 +6,8 @@ import java.util.function.Predicate;
 public class DemoPredicate {
 
   public static void main(String[] args) {
-    int age = 18;
-    boolean isElderly = age > 65;
+    // int age = 18;
+    // boolean isElderly = age > 65;
 
     Predicate<Integer> isElderly2 = age2 -> age2 > 65;
     System.out.println(isElderly2.test(66));// true

@@ -25,7 +25,7 @@ public class DemoFunction {
     System.out.println(totalLength.apply("hello","abc")); // 8
 
     // Why do we need to learn BiFunction
-    Map<String, Integer> nameLengthMap = new  HashMap<>();
+    Map<String, Integer> nameLengthMap = new HashMap<>();
     nameLengthMap.put("John", "John".length());
 
     Function<String,Integer> nameLength = s -> s.length();
@@ -40,6 +40,10 @@ public class DemoFunction {
     //7 * 9 find out Keyvalue, 9-> par, formula
     
 
+    // Method Reference
+    Function <String, Integer> stringToInteger = Integer::valueOf;
+    Integer number = stringToInteger.apply("123");
+    System.out.println(number);
 
 
 

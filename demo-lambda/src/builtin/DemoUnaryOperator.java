@@ -12,10 +12,12 @@ public class DemoUnaryOperator {
     // Function <T, T> (combine two T to one)
     UnaryOperator<String> u1 = s -> s;
     UnaryOperator<String> addHello = s -> s.concat("hello");
+    System.out.println(addHello.apply("ok"));
 
     BiFunction<Integer, Integer, Integer> f2 = (x, y) -> x + y;
     // BiFunction<T,T,T> (in, in , out)
     BinaryOperator<Integer> sum = (x, y) -> x + y;
+    System.out.println(f2.apply(1,2));
 
     // toUpperCase (String). "hello".toUpperCase() -> "HELLO"
     UnaryOperator<String> uppercase = s -> s.toUpperCase();

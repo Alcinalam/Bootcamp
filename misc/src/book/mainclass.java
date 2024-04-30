@@ -61,18 +61,7 @@ public class mainclass {
 List<Book> books4 = new ArrayList<>(
   List.of(new Book(10d,"Kenji"),new Book(13d,"Aska"),new Book(56d,"Karen"))
 );
- // booksrank.put("Top2",books4);
-  //System.out.println("ChangebookinRank:" + "\n" + booksrank);
 
-// sum all ordered book with static method
-// for (Map.Entry<String,List> m : booksrank.entrySet()){
-//   System.out.println(m.getKey() + " " + m.getValue());
-// }
-
-// for ( List<List> booklist: booksrank.values()) {
-//   System.out.println(booklist.get(0));
-
-//   }
 
   
 

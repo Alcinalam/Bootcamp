@@ -39,7 +39,7 @@ public class Staff {
 
   public static void main(String[] args) {
     // Set is a data structure that ensures no duplicated element is stored
-    // Set no index becuase base is map, not array
+    // Set no index because base is map, not array
     HashSet<Staff> staffs = new HashSet<>();
     staffs.add(new Staff("Vincent"));
     staffs.add(new Staff("Oscar"));

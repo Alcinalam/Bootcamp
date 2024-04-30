@@ -13,7 +13,7 @@ import java.util.function.Consumer;
 public class DemoConsumer {
 
   public static void main(String[] args) {
-    // viod accept (T t)
+    // void accept (T t)
     Consumer<String> printer = s -> System.out.println(s);
     printer.accept("hello");
 
@@ -59,7 +59,7 @@ public class DemoConsumer {
     // p = 2; // outside lambda can't use variable that created inside the lambda function
 
     // for each (lambda - Map -> BiConsumer)
-    Map<String, String> nameMap = new HashMap<>(); // 末抄完本身MAP for loop
+    Map<String, String> nameMap = new HashMap<>(); // 
     nameMap.put("Vincent", "abc");
     nameMap.put("Jenny", "ijk");
     for (Map.Entry<String, String> entry : nameMap.entrySet()) {
@@ -90,7 +90,7 @@ public class DemoConsumer {
     });
 
     Queue<String> q2 = new LinkedList<>();
-    for (String str : strings) { // others for look okay
+    for (String str : strings) { // others for loop okay
       q2.add(str); // OK
       q2 = new ArrayDeque<>();
     }
