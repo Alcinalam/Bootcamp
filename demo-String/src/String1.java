@@ -48,6 +48,8 @@ public class String1 {
 
     String s7 = "world";
     s7 += "!";
+    
     System.out.println(s7); // world!
+    System.out.println(s7.contains("o"));
   }
 }

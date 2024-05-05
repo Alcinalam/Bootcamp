@@ -4,8 +4,8 @@ public enum BookSysCode {
   BK_NOT_FOUND (404,"This Book not in List"),
   ;
 
-  private int code;
-  private String desc;
+  private final int code;
+  private final String desc;
 
   private BookSysCode (int code, String desc) {
     this.code = code;
@@ -20,4 +20,5 @@ public enum BookSysCode {
     return this.desc;
   }
 
+ 
 }

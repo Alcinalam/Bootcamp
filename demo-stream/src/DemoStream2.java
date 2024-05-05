@@ -74,5 +74,6 @@ public class DemoStream2 {
     // becuase map() won't affect the result of count,
     // so Stream would NOT execute map function if the terminal operation is count()
 
+    
   }
 }
