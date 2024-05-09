@@ -247,6 +247,14 @@ create table order3 (
     constraint FK_CustomerOrder foreign key (customer_id) references customer3(id)
 );
 
--- subquery
+-- WITH clause
+with top_customer as (
+	select customer_id, sum(total_amount) as total_spent
+		from order3
+		group by customer_id
+		limit 5	
+)
+select c.first_name, tc.total_spent
+from customer3 c inner join top_customer tc on c.id = tc.customer_id;
 
 

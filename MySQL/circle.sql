@@ -313,3 +313,117 @@ where o.customer_id is null;
 select * from customer3;
 select * from order3;
 
+-- WITH clause
+with top_customer as (
+	select customer_id, sum(total_amount) as total_spent
+		from order3
+		group by customer_id
+		limit 5	
+)
+select c.first_name, tc.total_spent
+from customer3 c inner join top_customer tc on c.id = tc.customer_id;
+
+-- union / union all
+select 'hello' as abc from dual
+union
+select 'goodbye' as abc from dual;
+
+-- append the whole result set, no matter it has duplicate record
+select 'hello' as abc from dual
+union all
+select 'goodbye' as abc from dual;
+
+-- append the result set, removing duplicate record (got distinct function)
+select 'hello' as abc from dual
+union
+select 'goodbye' as abc from dual;
+
+drop table student2;
+drop table teacher2;
+drop table subject2;
+drop table student_subject2;
+
+create table student2 (
+	id integer primary key auto_increment,
+    first_name varchar(20),
+    last_name varchar(20)
+   );
+
+create table teacher2 (
+	id integer primary key auto_increment,
+    first_name varchar(20),
+    last_name varchar(20)
+ );
+ 
+ create table subject2 (
+	id integer primary key auto_increment,
+    description varchar(20)
+ );
+ create table student_subject2 (
+	id integer primary key auto_increment,
+    student_id integer not null,
+    subject_id integer -- can be null
+ );
+ 
+ create table student_subject (
+	id integer primary key auto_increment,
+    student_id integer,
+    subject_id integer,
+    foreign key (student_id) references student2(id),
+    foreign key (subject_id) references subject2 (id)
+ );
+ 
+insert into student2 values (1,'Vincent','Lau');
+insert into student2 values (2,'ABC','Chan');
+insert into student2 values (3,'sally','wong');
+insert into student2 values (4,'betty','Lau');
+
+insert into subject2 values (1, 'Maths');
+insert into subject2 values (2,'English');
+
+insert into student_subject values (1,1,2); 
+
+insert into teacher2 values (1, 'XYZ', 'Lau');
+insert into teacher2 values (2, 'ABC', 'Chan');
+insert into teacher2 values (3, 'IJK', 'Lo');
+
+insert into student_subject2 values (1,null,1);
+insert into student_subject2 values (2,1,null);
+
+-- merge two result sets
+select first_name, last_name
+from student2
+union
+select first_name, last_name
+from teacher2;
+
+select first_name, last_name
+from student2
+where id > 1
+union
+select first_name, last_name
+from teacher2;
+
+
+-- full outer join (skip interst record)
+select * 
+from student2 s left join student_subject2 j on s.id = j.student_id
+where j.student_id is null
+union
+select *
+from student_subject2 j left join student2 s on s.id = j.student_id
+where s.student_id is null
+;
+
+-- view 
+create or replace view student_view
+as
+	select first_name, last_name from student2 where last_name in ('Lau','Chan');
+
+select * from student_view;
+
+
+
+
+    
+
