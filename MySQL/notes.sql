@@ -189,7 +189,64 @@ group by last_name;
 -- Having
 select last_name, count(1) as count
 from customer2
-where upper(ifnull(last_name,'x')) <> 'lo' -- execute before "group by"
+where upper(ifnull(last_name,'x')) <> 'lo' -- (filter the row)
 group by last_name -- second execution
-having count(1)  -- third execution (group level filtering)
+having count(1)  -- third execution (filter the group)
 ;
+
+-- inner join with self table (employee m is new)
+select e.name as Employee
+from employee e inner join employee m on e.managerId = m.id
+where e.salary > m.salary
+;
+
+-- inner join (multiply 2 set of records)
+select *
+from customer2 inner join order2;
+
+-- inner join -> find all orders with its customer data
+-- approach 1
+select c.first_name, c.last_name, c.phone,c.email, o.total_amount
+from customer2 c inner join order2 o on c.id = o.customer_id
+where o.total_amount > 30; -- execute after table join
+
+-- approach 2
+select c.first_name, c.last_name, c.phone, c.email, o.total_amount
+from customer2 c , order2 o
+where c.id = o.customer_id
+and o.total_amount > 30; 
+
+-- left join (all customers, with order)
+-- all data in customer3 retains in the result set
+select c.first_name,c.last_name, o.delivery_address, ifnull(o.total_amount,0)
+from customer3 c left join order3 o on c.id = o.customer_id;
+
+-- left join (customer without order)
+-- similar to "Not exists"
+select c.first_name,c.last_name, o.delivery_address, ifnull(o.total_amount,0)
+from customer3 c left join order3 o on c.id = o.customer_id
+where o.customer_id is null;
+
+-- primary key
+-- auto_increment
+create table customer3 (
+	id integer primary key auto_increment,
+	first_name varchar(20),
+    last_name varchar(20),
+	phone varchar(50),
+    email varchar(50)
+);
+
+-- another approch of primary key & foreign key references
+create table order3 (
+	id integer auto_increment,
+    customer_id integer,
+    delivery_address varchar(100),
+    total_amount decimal(10,2),
+    primary key (id), -- another way to create primary key
+    constraint FK_CustomerOrder foreign key (customer_id) references customer3(id)
+);
+
+-- subquery
+
+

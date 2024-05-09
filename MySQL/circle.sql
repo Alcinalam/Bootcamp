@@ -250,3 +250,66 @@ select c.first_name, c.last_name, c.phone, c.email, o.total_amount
 from customer2 c , order2 o
 where c.id = o.customer_id
 and o.total_amount > 30; 
+
+select * from order2;
+
+-- without Foreign key
+-- insert into order2 values (5,99,'asdf',12.33) -- custoemr2 table may not have id 99
+
+-- add Foreign key
+alter table order2
+add foreign key (customer_id) references customer2(id);
+
+ create table Customer3 (
+	id integer primary key auto_increment,
+	first_name varchar(20),
+    last_name varchar(20),
+    phone varchar(50),
+    email varchar(50)
+ );
+
+create table order3(
+	id integer auto_increment,
+    customer_id integer,
+    delivery_address varchar(100),
+    total_amount decimal (10,2),
+    primary Key (id),
+    constraint FK_CustomerOrder foreign Key (customer_id) references customer3(id)
+);
+
+
+ insert into customer3 values(1,'Vincent','Lau','852 1234567','vincent@gmail.com'),
+							 (2,'Oscar','Lo','852 87654321','oscar@gmail.com');
+                             
+ insert into customer3 values(3,'Jenny','Lau',' 852 87654321 ','jenny@gmail.com');
+ insert into customer3 values(4,'kelly','Lau',' 852 87654321 ','jenny@gmail.com');
+ 
+insert into order3 values (1, 2, 'ABC XYZ', 100.44);
+insert into order3 values (2, 2, 'xxxABC XYZ', 22.88);
+insert into order3 values (3, 1, 'aaABC XYZ', 12.12);
+insert into order3 values (4, 3, 'aaAfffffBC XYZ', 90.12);
+
+-- with Foreign Key : you cannot add a child row with foreign key value not exists in parent primary key column
+insert into order3 values (5, 4, 'aaAfffffBC XYZ', 90.12); -- 4 not in customer3 id
+select * from customer3;
+
+insert into order3 values (6, 4, 'aaAfffffBC XYZ', null);
+
+-- inner join
+select c.first_name,c.last_name, o.delivery_address, o.total_amount
+from customer3 c inner join order3 o on c.id = o.customer_id;
+
+-- left join (all customers, with order)
+-- all data in customer3 retains in the result set
+select c.first_name,c.last_name, o.delivery_address, ifnull(o.total_amount,0)
+from customer3 c left join order3 o on c.id = o.customer_id;
+
+-- left join (customer without order)
+-- similar to "Not exists"
+select c.first_name,c.last_name, o.delivery_address, ifnull(o.total_amount,0)
+from customer3 c left join order3 o on c.id = o.customer_id
+where o.customer_id is null;
+
+select * from customer3;
+select * from order3;
+

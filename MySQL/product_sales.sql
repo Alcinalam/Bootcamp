@@ -17,6 +17,7 @@ insert into product values (3,'Headphones', 79.99,'Wireless headphones with nois
 
 select * from product order by name ;
 select max(price) as max_price from product ;
+select * from product where price = (select max(price) from product);
 select count(*) as product_count from product ;
 select * from product where name = 'Laptop';
 select avg (price) as avg_price from product ;
@@ -24,6 +25,8 @@ select * from product order by current_timestamp limit 1;
 select sum(price) as total_price from product ;
 select min(price) as min_price_for_phone , max(price) as max_price_for_phone from product where name like '%phone%';
 select description as product_description from product where lower(description) like '%wireless%'  ;
+
+
 
 
 create table Sales (
