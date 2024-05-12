@@ -44,8 +44,9 @@ public class Node { // same as object
 
   public static void main(String[] args) {
     // "hello","abc","def"
-    Node head = new Node("hello", new Node("abc", new Node("def")));
-    System.out.println(head);;
+    // Node head = new Node("hello", new Node("abc", new Node("def")));
+    Node head = new Node("hello");
+    System.out.println(head);
 
     // check if head contains "def" -> true/false
     // for loop? while loop -> linked list

@@ -257,4 +257,8 @@ with top_customer as (
 select c.first_name, tc.total_spent
 from customer3 c inner join top_customer tc on c.id = tc.customer_id;
 
+select e.name, b.bonus
+from  employee e left join bonus b on e.empid = b.empid
+where ifnull(b.bonus,0 ) < 1000 -- first make null to 0
+
 

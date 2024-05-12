@@ -24,8 +24,9 @@ public class Customer {
 
   public static void main(String[] args) {
     Optional<String> result = null;
-    result = Optional.of ("hello");
-    result = Optional.empty(); // optional object with null value
+    result = Optional.of("hello"); // Optional[hello]
+    result = Optional.empty(); // Optional.empty, optional object with null value
+    System.out.println(result);
 
     String str = "hello";
     int x = 10;
@@ -34,14 +35,13 @@ public class Customer {
     result = Optional.ofNullable(str); // can store null or non-null object
     // Optional.of(null); // NPE
 
-    List<String> names = new ArrayList<>(List.of("Tom","Jenny","Ben"));
+    List<String> names = new ArrayList<>(List.of("Tom", "Jenny", "Ben"));
     // stream
     List<Optional<String>> result2 = names.stream()//
-      .map(e -> Optional.ofNullable(e)) //
-      //.map(Optional :: ofNullable) // method reference (in, out same as e)
-      .collect(Collectors.toList());
+        .map(e -> Optional.ofNullable(e)) //
+        // .map(Optional :: ofNullable) // method reference (in, out same as e)
+        .collect(Collectors.toList());
     System.out.println(result2);
-
 
 
 

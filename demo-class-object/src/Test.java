@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class Test {
   public static void main(String[] args) {
 
@@ -6,7 +8,7 @@ public class Test {
     System.out.println(car.getColor()); // null
     System.out.println(car.getCapacity()); // 0
 
-    if (car.isOverSpeed()){ // car.isOverSpeed() == true
+    if (car.isOverSpeed()) { // car.isOverSpeed() == true
 
     }
 
@@ -17,12 +19,14 @@ public class Test {
     Integer x2 = null;
     String s2 = "hello"; // char[] -> 'h''e''l''l''o'
 
-    boolean b1 = false; 
+    boolean b1 = false;
     System.out.println(b1);// initialiaztion before use
 
+    System.out.println(LocalDate.now().getYear() - Variables.age);
 
-  
+    int age = Variables.getAge();
+    System.out.println(age);
   }
-  
+
 
 }
