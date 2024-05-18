@@ -18,8 +18,9 @@ public class Account {
     this.transactions[idx] = transaction;
   }
 
-  double sum = 0;
+ 
   public double balance() {
+    double sum = 0.0d;
     for (int i = 0; i < transactions.length;i++) {
       if(transactions[i].getSign()== Sign.CREDIT){
         sum += transactions[i].getAmount();
@@ -31,12 +32,20 @@ public class Account {
   }
 
   public void credit(Currency currency, double amount) {
-
-  }
+    Transaction creditT = new Transaction(Sign.CREDIT, currency, amount);
+    add(creditT);
+  } 
 
   public void debit(Currency currency, double amount) {
- 
+    if(balance() >= amount){
+      Transaction debitT = new Transaction(Sign.DEBIT, currency, amount);
+      add(debitT);
+      } else {
+      System.out.println("No Transaction: Current Bal Not enough ");
+      }
+    
   }
+
 
   public String toString() {
     return "Account(" //
@@ -48,13 +57,17 @@ public class Account {
 
   public static void main(String[] args) {
     Account account = new Account();
-    account.add(new Transaction(Sign.CREDIT, Currency.HKD, 2500));
-    account.add(new Transaction(Sign.DEBIT, Currency.HKD, 1300));
-    System.out.println(account.balance()); //1200
-
-    account.credit(Currency.HKD, 1000);
-    account.debit(Currency.HKD, 500);
+    account.add(new Transaction(Sign.CREDIT, Currency.HKD, 1200));
+    account.add(new Transaction(Sign.DEBIT, Currency.HKD, 200));
+    System.out.println(account.balance()); //1000
+   
     System.out.println(account.balance()); 
+
+    account.credit(Currency.HKD, 500);
+    account.credit(Currency.HKD, 500);
+    account.debit(Currency.HKD, 100);
+    System.out.println("Bal: " + account.balance()); 
+
 
   }
 }
